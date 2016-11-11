@@ -2,6 +2,10 @@
 	font-family: 'princ';
 	src: url(../fonts/princ.ttf) format('truetype');
 }
+@font-face {
+	font-family: '03smart';
+	src: url('../fonts/03SmartFontUI.woff') format('woff');
+}
 *,
 *:after,
 *:before {
@@ -28,7 +32,7 @@ body:before {
 	right: 0;
 	z-index: -1;
 	display: block;
-	background-image: url('../img/background5.jpg');
+	background-image: url('../img/background4.jpg');
 	background-size:cover;
 	width: 100%;
 	height: 100%;
@@ -46,26 +50,48 @@ a {
 a:hover {
 	color: #fff;
 }
+p {
+	font-size: 1.6em;
+	color: #fff;
+	font-weight: 90;
+}
 
 .panel{
 	position: absolute;
 	overflow-y: auto;
 	overflow-x: hidden;
 	background: rgba(0,0,0,0);
-	top: -150%;
+	top: 0%;
 	width: 100%;
 	height: 100%;
-	-webkit-transition: all .8s ease-in-out;
-	-moz-transition: all .8s ease-in-out;
-	-o-transition: all .8s ease-in-out;
-	transition: all .8s ease-in-out;
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 0;
+	display: block;
+	background-image: url('../img/background4.jpg');
+	background-size:cover;
+	width: 100%;
+	height: 100%;
 }
-
+#about:not(:target),
+#work:not(:target),
+#skill:not(:target),
+#contact:not(:target){
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition:all .5s linear;
+	transition:all .5s linear;
+}
 #about:target,
 #work:target,
 #skill:target,
 #contact:target{
-	top: 0%;
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition:all .5s linear;
+	transition:all .5s linear;
 }
 
 .title {
@@ -78,6 +104,22 @@ a:hover {
 	font-weight: lighter;
 	color: #fff;
 	transition:all .3s ease 0s;
+}
+.min-title{
+	position: relative;
+	cursor: pointer;
+	margin: auto;
+	margin-top: 10%;
+	max-width: 4em;
+	font-size: 6em;
+	font-weight: lighter;
+	color: #fff;
+	transition:all .3s ease 0s;
+}
+.subject{
+	font-size: 2.2em;
+	font-weight: 70;
+	color: #fff;
 }
 
 .menu_list {
@@ -131,6 +173,19 @@ a:hover {
 	fill:#fff;
 	cursor: pointer;
 }
+.cancel {
+	width: 4em;
+	fill:#bbb;
+	margin-top: 2em;
+	-webkit-transition:all .2s;
+	transition:all .2s;
+}
+.cancel:hover {
+	-webkit-transform: scale(1.2,1.2);
+	transform: scale(1.2,1.2);
+	fill:#fff;
+	cursor: pointer;
+}
 
 .icon_list {
 	position: absolute;
@@ -152,6 +207,51 @@ a:hover {
 	position: relative;
 }
 
+.work-box{
+	position: relative;
+	width: 60%;
+	margin: 0 auto;
+}
+.work-title{
+	font-size: 2.2em;
+	font-weight: 70;
+	color: #fff;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	text-align: center; /* for no-flexbox browsers */
+}
+.work-title:before,
+.work-title:after{
+	border-top: 1px solid;
+	content: "";
+	display: inline; /* for IE */
+	flex-grow: 1;
+}
+.work-title:before{
+	margin-right: 0.5em;
+}
+.work-title:after{
+	margin-left: 0.5em;
+}
+.work-pic{
+	position: relative;
+	width: 35%;
+	margin: 5%;
+	display: inline-block;
+	vertical-align: top;
+}
+.work-text{
+	position: relative;
+	font-size: 1em;
+	text-align: left;
+	line-height: 180%;
+	margin-top: 5%;
+	font-family: sans-serif;
+	display: inline-block;
+}
+
 @media screen and (max-width: 640px){
 	.title{
 		font-size: 5em;
@@ -164,5 +264,8 @@ a:hover {
 	}
 	.icon_list > ul {
 		width: 80%;
+	}
+	.work-box{
+	width: 90%;
 	}
 }
