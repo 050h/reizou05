@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 82">
+<svg class="cancel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 82">
 	<g>
 		<path d="M41,82C18.4,82,0,63.6,0,41S18.4,0,41,0s41,18.4,41,41S63.6,82,41,82z M41,2C19.5,2,2,19.5,2,41s17.5,39,39,39
 			s39-17.5,39-39S62.5,2,41,2z"/>
