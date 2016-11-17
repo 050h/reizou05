@@ -304,6 +304,28 @@ p {
 		width: 90%;
 	}
 	.skill-title{
-		width: 40%;
+		width: 50%;
+	}
+}
+
+@media screen and (max-device-width: 770px){
+	.title{
+		font-size: 5em;
+	}
+	.menu_list > ul {
+		width: 80%;
+	}
+	.menu_list > ul > li {
+		width: 50%;
+	}
+	.icon_list > ul {
+		width: 80%;
+		margin-top: 2em;
+	}
+	.work-box{
+		width: 90%;
+	}
+	.skill-title{
+		width: 50%;
 	}
 }
