@@ -254,5 +254,33 @@ p{
 	border-right: none;
 }
 
+@media screen and (max-width: 840px){
+	#top{
+		width: 100%;
+		height: 100%;
+	}
+	.menu_list{
+		margin-top: 5rem;
+	}
+	.menu_list ul li{
+		font-size: 1.4rem;
+	}
+	.sns_list ul li{
+		width: 25vmin;
+		height: 25vmin;
+		font-size: 2rem;
+	}
+	.sns_list ul li a i{
+		top: 22px;
+	}
+	.sns_list ul li a{
+		height: 25vmin;
+	}
+	.sns_list{
+		bottom: -60%;
+	}
+}
+
+
 
 
