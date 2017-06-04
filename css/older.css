@@ -1,0 +1,462 @@
+@font-face
+{
+    font-family: 'princ';
+
+    src: url(../fonts/princ.ttf) format('truetype');
+}
+*,
+*:after,
+*:before
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    -webkit-overflow-scrolling: touch;
+}
+html,
+body
+{
+    font-family: 'princ';
+
+    position: relative;
+
+    overflow: hidden;
+    overflow-x: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+}
+body:before
+{
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+    transform: scale(1.05);
+
+    background-image: url('../img/background4.jpg');
+    background-size: cover;
+
+    -webkit-filter: blur(3px);
+       -moz-filter: blur(3px);
+         -o-filter: blur(3px);
+        -ms-filter: blur(3px);
+            filter: blur(3px);
+}
+a
+{
+    text-decoration: none;
+
+    color: #bbb;
+}
+a:hover
+{
+    color: #fff;
+}
+p
+{
+    font-size: 1.6em;
+    line-height: 1.4em;
+
+    color: #fff;
+}
+
+.panel
+{
+    position: absolute;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background: rgba(0,0,0,0);
+    background-image: url('../img/background4.jpg');
+    background-size: cover;
+}
+#about:not(:target),
+#work:not(:target),
+#skill:not(:target),
+#contact:not(:target)
+{
+    visibility: hidden;
+
+    -webkit-transition: all .5s linear;
+            transition: all .5s linear;
+
+    opacity: 0;
+}
+#about:target,
+#work:target,
+#skill:target,
+#contact:target
+{
+    visibility: visible;
+
+    -webkit-transition: all .5s linear;
+            transition: all .5s linear;
+
+    opacity: 1;
+}
+
+.title
+{
+    font-size: 6em;
+    font-weight: lighter;
+
+    position: relative;
+
+    max-width: 4em;
+    margin: auto;
+    margin-top: 10%;
+
+    cursor: pointer;
+    transition: all .3s ease 0s;
+
+    color: #fff;
+}
+.min-title
+{
+    font-size: 6em;
+    font-weight: lighter;
+
+    position: relative;
+
+    max-width: 4em;
+    margin: auto;
+    margin-top: 10%;
+
+    cursor: pointer;
+    transition: all .3s ease 0s;
+
+    color: #fff;
+}
+.subject
+{
+    font-size: 2.2em;
+    font-weight: 500;
+
+    color: #fff;
+}
+.bottom-text
+{
+    font-size: 1.2em;
+    font-weight: 400;
+
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: 1%;
+    left: 0;
+
+    max-width: 20em;
+    margin: auto;
+
+    letter-spacing: .1em;
+}
+
+.menu_list
+{
+    position: absolute;
+    top: 35%;
+
+    width: 100%;
+    margin: auto;
+
+    transition: all .5s ease 0s;
+}
+.menu_list > ul
+{
+    width: 30%;
+    margin: auto;
+    padding: 0;
+}
+.menu_list > ul > li
+{
+    font-size: 1.6em;
+
+    position: relative;
+
+    float: left;
+
+    width: 25%;
+
+    list-style: none;
+
+    cursor: pointer;
+    transition: all .3s ease 0s;
+    text-align: center;
+    letter-spacing: 0;
+
+    color: #bbb;
+}
+.menu_list > ul > li::before,
+.menu_list > ul > li::after
+{
+    position: absolute;
+
+    width: 0;
+    height: 1px;
+
+    content: '';
+    transition: all .3s;
+
+    background-color: #fff;
+}
+.menu_list > ul > li:hover
+{
+    font-weight: bold;
+
+    letter-spacing: .1em;
+
+    color: #fff;
+}
+
+.icon
+{
+    width: 4em;
+
+    -webkit-transition: all .2s;
+            transition: all .2s;
+
+    fill: #bbb;
+}
+.icon:hover
+{
+    cursor: pointer;
+    -webkit-transform: scale(1.2,1.2);
+            transform: scale(1.2,1.2);
+
+    fill: #fff;
+}
+.cancel
+{
+    width: 4em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    -webkit-transition: all .2s;
+            transition: all .2s;
+
+    fill: #bbb;
+}
+.cancel:hover
+{
+    cursor: pointer;
+    -webkit-transform: scale(1.2,1.2);
+            transform: scale(1.2,1.2);
+
+    fill: #fff;
+}
+
+.icon_list
+{
+    position: absolute;
+    top: 45%;
+
+    width: 100%;
+    margin: auto;
+}
+.icon_list > ul
+{
+    width: 30%;
+    margin: auto;
+    padding: 0;
+}
+.icon_list > ul > li
+{
+    position: relative;
+
+    float: left;
+
+    width: 33.333%;
+
+    list-style: none;
+
+    text-align: center;
+
+    color: #fff;
+}
+
+.work-box
+{
+    position: relative;
+
+    width: 60%;
+    margin: 0 auto;
+}
+.work-title
+{
+    font-size: 2.2em;
+    font-weight: 600;
+
+    display: flex;
+
+    width: 100%;
+    margin: 0 auto;
+
+    text-align: center; /* for no-flexbox browsers */
+
+    color: #fff;
+
+    align-items: center;
+}
+.work-title:before,
+.work-title:after
+{
+    display: inline; /* for IE */
+
+    content: '';
+
+    border-top: 1px solid;
+
+    flex-grow: 1;
+}
+.work-title:before
+{
+    margin-right: .5em;
+}
+.work-title:after
+{
+    margin-left: .5em;
+}
+.work-pic
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 35%;
+    margin: .5em;
+
+    vertical-align: top;
+}
+.work-text
+{
+    font-family: sans-serif;
+    font-size: 1em;
+    line-height: 180%;
+
+    position: relative;
+
+    display: inline-block;
+
+    margin-top: .5em;
+
+    text-align: left;
+}
+
+.skill-title
+{
+    font-size: 2.2em;
+    font-weight: 70;
+
+    display: flex;
+
+    width: 15%;
+    margin: 0 auto;
+
+    text-align: center; /* for no-flexbox browsers */
+
+    color: #fff;
+
+    align-items: center;
+}
+.skill-title:before,
+.skill-title:after
+{
+    display: inline; /* for IE */
+
+    content: '';
+
+    border-top: 1px solid;
+
+    flex-grow: 1;
+}
+.skill-title:before
+{
+    margin-right: .5em;
+}
+.skill-title:after
+{
+    margin-left: .5em;
+}
+
+@media screen and (max-width: 640px)
+{
+    .title
+    {
+        font-size: 5em;
+    }
+    .menu_list > ul
+    {
+        width: 80%;
+    }
+    .menu_list > ul > li
+    {
+        width: 50%;
+    }
+    .icon_list > ul
+    {
+        width: 80%;
+        margin-top: 2em;
+    }
+    .work-box
+    {
+        width: 90%;
+    }
+    .skill-title
+    {
+        width: 50%;
+    }
+}
+
+@media screen and (max-device-width: 770px)
+{
+    .title
+    {
+        font-size: 5em;
+    }
+    .menu_list > ul
+    {
+        width: 80%;
+    }
+    .menu_list > ul > li
+    {
+        width: 50%;
+    }
+    .icon_list > ul
+    {
+        width: 80%;
+        margin-top: 2em;
+    }
+    .work-box
+    {
+        width: 90%;
+    }
+    .skill-title
+    {
+        width: 50%;
+    }
+}
